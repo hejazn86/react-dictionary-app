@@ -1,5 +1,7 @@
 .App {
   max-width: 600px;
-  text-align: center;
-  margin-top: 50px;
+  margin: 50px auto;
+  background-color: rgb(250, 230, 206);
+  padding: 10px 50px 200px 20px;
+  border-radius: 10px;
 }
