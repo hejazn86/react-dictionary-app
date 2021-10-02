@@ -10,7 +10,7 @@ export default function Pronounciation(props){
     
     return (
         <div className='Pronounciation'>
-            <button onClick={playAudio}>Listen</button>
+            <button className="btn btn-white  p-3 border-radius-3" onClick={playAudio}>Listen</button>
             <audio>
                 <source src={audioFile}>Listen</source>
             </audio>
