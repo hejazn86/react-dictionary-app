@@ -22,6 +22,7 @@ export default function SearchWord(){
     }
 
     function handleResult(response){
+        console.log(response.data[0])
         setResult(response.data[0]);
     }
     function search(){

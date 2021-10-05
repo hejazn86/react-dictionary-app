@@ -1,5 +1,6 @@
 import React from 'react';
 import Meaning from './Meaning';
+import Synonyms from './Synonyms';
 // import Pronounciation from './Pronounciation';
 export default function WordDefinitions(props){
     if(props.results){  
@@ -17,9 +18,11 @@ export default function WordDefinitions(props){
                     return(
                         <div key={index}>
                             <Meaning  meaning={meaning}/>
+                            <Synonyms  synonyms={meaning.definitions[0].synonyms}/>
                         </div>
                     )
                 })}
+                
             </div>
         </div>
     );} else{
