@@ -5,9 +5,9 @@ export default function Meaning (props){
     return (
         <div className='Meaning'>
             <div>
-            <h4 className="font-weight-bold">{props.meaning.partOfSpeech}</h4>
+            <h4 className="fs-1 fw-bolder">{props.meaning.partOfSpeech}</h4>
             <p>{props.meaning.definitions[0].definition}</p>
-            <p><strong>Example :</strong> {"  "}{props.meaning.definitions[0].example}</p>
+            <p className='example opacity-75'><strong className='opacity-100'>Example :</strong> {"  "}{props.meaning.definitions[0].example}</p>
             </div>
             <div>
             

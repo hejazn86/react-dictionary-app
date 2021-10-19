@@ -32,22 +32,32 @@ export default function SearchWord(){
 
     if (loaded){
     return (
+       
         <div className='SearchWord'>
+             <section>
+             <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
             <form onSubmit={handleSubmit}>
-                <input type="search" className="form-control w-50" placeholder="Search a word..." onChange={changeWord}/> 
+                <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
             </form>
+            </section>
             
             <WordDefinitions results={result}/>
         </div> 
         
+        
     );
     } else{
         return(
-        <div className='SearchWord'>
-        <form onSubmit={handleSubmit}>
-            <input type="search" className="form-control w-50" placeholder="Search a word..." onChange={changeWord}/> 
-        </form>
-        </div>
+        
+            <div className='SearchWord'>
+                <section>
+                    <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
+                <form onSubmit={handleSubmit}>
+                    <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
+                </form>
+                </section>
+            </div>
+        
         );  
     }
 

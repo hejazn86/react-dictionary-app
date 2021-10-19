@@ -7,17 +7,19 @@ export default function WordDefinitions(props){
     if(props.results){  
         return (
         <div className='WordDefinitions'>
-            <div className='word'>
-                <h2 className="mt-4">{props.results.word}</h2>
+            <section>
+            <div className='word ps-3'>
+                <h2 className="mt-2 fs-2 fw-bold">{props.results.word}</h2>
                  <Phonetics phonetics={props.results.phonetics[0]}/>
             </div>
+            </section>
             <div className='definitions mt-4'>
                 {props.results.meanings.map((meaning, index)=>{
                     return(
-                        <div key={index}>
+                        <section key={index}>
                             <Meaning  meaning={meaning}/>
                             <Synonyms  synonyms={meaning.definitions[0].synonyms}/>
-                        </div>
+                        </section>
                     )
                 })}
                 

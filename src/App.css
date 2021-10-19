@@ -1,10 +1,20 @@
 .container {
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 700px;
+  padding: 50px 50px;
 }
 
-.App {
-  background-color: rgb(250, 230, 206);
+/* .App {
+  background-color: rgb(250, 238, 223);
   padding: 10px 50px 200px 20px;
   border-radius: 10px;
+} */
+
+section {
+  border: 1px solid rgb(245, 241, 241);
+  border-radius: 15px;
+  padding: 20px 0 20px 40px;
+  margin-top: 10px;
+  background-color: rgb(245, 241, 241);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
