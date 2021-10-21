@@ -48,9 +48,11 @@ export default function SearchWord(props){
         <div className='SearchWord'>
              <section>
              <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
+             <div className='col-md-12'>
             <form onSubmit={handleSubmit}>
                 <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
             </form>
+            </div>
             </section>
             
             <WordDefinitions results={result}/>
