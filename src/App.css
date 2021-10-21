@@ -1,5 +1,5 @@
 .container {
-  max-width: 700px;
+  max-width: 900px;
   padding: 50px 50px;
 }
 
@@ -11,9 +11,9 @@
 
 section {
   border: 1px solid rgb(245, 241, 241);
-  border-radius: 15px;
-  padding: 20px 0 20px 40px;
-  margin-top: 10px;
+  border-radius: 8px;
+  padding: 20px 20px 20px 40px;
+  margin-top: 20px;
   background-color: rgb(245, 241, 241);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
