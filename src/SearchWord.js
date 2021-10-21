@@ -4,8 +4,8 @@ import axios from 'axios';
 import WordDefinitions from './WordDefinitions';
 import Photos from './Photos';
 
-export default function SearchWord(){
-    const [word, setWord] = useState("");
+export default function SearchWord(props){
+    const [word, setWord] = useState(props.defaultWord);
     const [result, setResult] = useState(null);
     const [loaded, SetLoaded] = useState(false);
     const [photo, setPhoto] = useState(null);
@@ -63,12 +63,16 @@ export default function SearchWord(){
         return(
         
             <div className='SearchWord'>
+                {search(word)}
                 <section>
                     <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
                 <form onSubmit={handleSubmit}>
                     <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
                 </form>
                 </section>
+                
+                <WordDefinitions results={result}/>
+                <Photos photos= {photo}/>
             </div>
         
         );  

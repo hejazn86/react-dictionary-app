@@ -5,10 +5,10 @@ function App() {
   return (
     <div className='container'>
     <div className="App">
+      
       <header className="App-header">
-        <SearchWord />
+        <SearchWord  defaultWord='joy'/>
       </header>
-
 
     </div>
     <footer>
