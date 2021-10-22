@@ -13,14 +13,14 @@ export default function SearchWord(props){
     
     function handleSubmit(event){
         event.preventDefault();
-        SetLoaded(true);
-        search();
+        
 
     }
 
     function changeWord(event){
         event.preventDefault();
         setWord(event.target.value);
+        
     }
 
     function handleResult(response){
@@ -28,7 +28,6 @@ export default function SearchWord(props){
     }
 
     function handlePexelResponse(response){
-        // console.log(response.data.photos);
         setPhoto(response.data.photos)
     }
     function search(){
@@ -40,6 +39,12 @@ export default function SearchWord(props){
     let pexelApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=6`;
     let headers = {Authorization : `Bearer ${pexelApiKey}`};
     axios.get(pexelApiUrl, {headers : headers}).then(handlePexelResponse);
+    }
+
+    function load(){
+        SetLoaded(true);
+        search();
+
     }
 
     if (loaded){
@@ -79,5 +84,4 @@ export default function SearchWord(props){
         
         );  
     }
-
 }
