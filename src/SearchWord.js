@@ -13,8 +13,7 @@ export default function SearchWord(props){
     
     function handleSubmit(event){
         event.preventDefault();
-        
-
+        search()
     }
 
     function changeWord(event){
@@ -25,6 +24,7 @@ export default function SearchWord(props){
 
     function handleResult(response){
         setResult(response.data[0]);
+        
     }
 
     function handlePexelResponse(response){
@@ -55,7 +55,7 @@ export default function SearchWord(props){
              <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
              <div className='col-md-12'>
             <form onSubmit={handleSubmit}>
-                <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
+                <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord} defaultValue={props.defaultWord}/> 
             </form>
             </div>
             </section>
@@ -67,21 +67,7 @@ export default function SearchWord(props){
         
     );
     } else{
-        return(
-        
-            <div className='SearchWord'>
-                {search(word)}
-                <section>
-                    <div className='fs-4 fw-bold mb-3 mx-3'>What is in your mind?</div>
-                <form onSubmit={handleSubmit}>
-                    <input type="search" className="form-control" placeholder="Search a word..." onChange={changeWord}/> 
-                </form>
-                </section>
-                
-                <WordDefinitions results={result}/>
-                <Photos photos= {photo}/>
-            </div>
-        
-        );  
+        load();
+        return 'loading';  
     }
 }
